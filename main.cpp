@@ -90,12 +90,17 @@ void AggRadical(){
     cin>>coeficiente;
     cout<<"Ingrese indice: "<<endl;
     cin>>indice;
-    while (indice < 0){
-        cout<<"Indice no puede ser 0. Ingrese indice otra vez: "<<endl;
+    while (indice <= 0){
+        cout<<"Indice no puede ser 0 o  negativo. Ingrese indice otra vez: "<<endl;
         cin>>indice;
     }
     cout<<"Ingrese radicando: "<<endl;
     cin>>radicando;
+    while(radicando<0){
+        cout<<"ERROR no puede ser negativo ingrese de nuevo:"<<endl;
+        cin>>radicando;
+    }
+    
 
     radical = new Radical(coeficiente,indice,radicando);
     banco.push_back(radical);
