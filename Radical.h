@@ -13,7 +13,7 @@ class Radical:public Real{
         double getCoeficiente();
         double getIndice();
         double getRadicando();
-        
+        string toString();
 };
 
 #endif

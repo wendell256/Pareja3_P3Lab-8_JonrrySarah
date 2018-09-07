@@ -20,3 +20,14 @@ double Radical::getRadicando(){
     return radicando;
 }
 
+string Radical::toString(){
+    string tmpnum,Scoeficiente,Sindice,Sradicando;
+    Scoeficiente= to_string(coeficiente);
+    Sindice = to_string(indice);
+    Sradicando = to_string(radicando);
+    tmpnum=Scoeficiente+"x "+ Sindice + "√("+ Sradicando + ")"; 
+    return tmpnum;
+}
+
+
+
