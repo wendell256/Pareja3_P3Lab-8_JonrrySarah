@@ -198,7 +198,7 @@ void RealizarOperacion(){
             cout<<"+";
             toString(tmp);
             cout<<" = ";
-            cout<<endl<<*banco[opc]+*tmp<<endl;
+            cout<<*banco[opc]+*tmp<<endl;
         break;
         case 2:
             cout<<endl;
@@ -231,8 +231,6 @@ void RealizarOperacion(){
 void toString(Real* num1){
     Radical* radical = dynamic_cast<Radical*>(num1);
     Racional* racional = dynamic_cast<Racional*>(num1);
-    Radical radical2 = *radical;
-    Racional racional2 = *racional;
     if(radical!=NULL){
         cout<<radical->toString();
     }
