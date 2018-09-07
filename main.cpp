@@ -1,6 +1,9 @@
 #include "Real.h"
 #include "Radical.h"
 #include "Racional.h"
+#include <sstream>
+#include <fstream>
+#include <cstdlib>
 
 #include <iostream>
 #include <vector>
@@ -12,6 +15,8 @@ void RealizarOperacion();
 void printBanco();
 void printBanco2();
 void toString();
+void escribirArchivo();
+void cargarArchivo();
 
 vector<Real*> banco;
 int main(){
@@ -208,3 +213,4 @@ void toString(Real* num1){
     }
 
 }
+
