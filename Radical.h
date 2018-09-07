@@ -10,8 +10,10 @@ class Radical:public Real{
         double radicando;
     public:
         Radical(double,double,double);
+        double getCoeficiente();
+        double getIndice();
+        double getRadicando();
         
-
 };
 
 #endif

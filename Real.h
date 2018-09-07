@@ -1,12 +1,16 @@
 #ifndef REAL_H
 #define REAL_H
 
+#include <string>
+using namespace std;
+
 class Real{
     protected:
-        virtual double operator+(Real&)=0;
-        virtual double operator-(Real&)=0;
-        virtual double operator*(Real&)=0;
-        virtual double operator/(Real&)=0;
+        virtual string toString()=0;
+        double operator+(Real&);
+        double operator-(Real&);
+        double operator*(Real&);
+        double operator/(Real&);
         double num;
 };
 
