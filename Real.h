@@ -12,6 +12,11 @@ class Real{
         double operator*(Real&);
         double operator/(Real&);
         double num;
+
+    public: 
+        double getNum();
+
+        
 };
 
 #endif
