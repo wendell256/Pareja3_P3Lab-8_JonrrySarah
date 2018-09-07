@@ -6,16 +6,18 @@ using namespace std;
 
 class Real{
     protected:
-        virtual string toString()=0;
+        virtual string toString();
+        double num;
+
+    public: 
+        Real();
+        Real(double);
+        double getNum();
         double operator+(Real&);
         double operator-(Real&);
         double operator*(Real&);
         double operator/(Real&);
-        double num;
-
-    public: 
-        double getNum();
-
+        void setNum(double);
         
 };
 
