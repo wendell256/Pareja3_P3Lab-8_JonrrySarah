@@ -14,7 +14,7 @@ void AggRadical();
 void RealizarOperacion();
 void printBanco();
 void printBanco2();
-void toString();
+void toString(Real*);
 void escribirArchivo();
 void cargarArchivo();
 
@@ -23,14 +23,38 @@ int main(){
     int opc;
     char resp='s';
     while(resp=='s'||resp=='S'){
-        cout<<"OPERADORES DE NUMEROS"<<endl<<"By: Sarah y Wendell"<<endl<<"1) Agregar Racional al banco"<<endl
-            <<"3) Agregar Radical al banco"<<endl<<"4) Realizar Operacion"<<endl<<"5) Ver Banco"<<endl
-            <<"6) Salir"<<endl<<"Seleccione una opcion: "<<endl;
+        cout<<endl<<"OPERADORES DE NUMEROS"<<endl<<"By: Sarah y Wendell"<<endl<<"1) Agregar Racional al banco"<<endl
+            <<"2) Agregar Radical al banco"<<endl<<"3) Realizar Operacion"<<endl<<"4) Ver Banco"<<endl
+            <<"5) Salir"<<endl<<"Seleccione una opcion: "<<endl;
         cin>>opc;
         switch(opc){
             case 1:
                 AggRacional();
+            break;
+            case 2:
+                AggRadical();
+            break;
+            case 3:
+                if(banco.empty())
+                    cout<<"BANCO VACIO"<<endl;
+                else
+                    RealizarOperacion();
+            break;
+            case 4:
+                if(banco.empty())
+                    cout<<"BANCO VACIO"<<endl;
+                else
+                    printBanco();
+            break;
+            case 5:
+
+            break;
+            default:
+                cout<<"Error"<<endl;
+
         }
+        cout<<"Reiniciar?s/n"<<endl;
+        cin>>resp;
     }
 
 }
@@ -51,6 +75,8 @@ void AggRacional(){
             if (denominador != 0)
                 invalido = false;
         }
+        else
+            invalido = false;
     }
     racional = new Racional(numerador,denominador);
     banco.push_back(racional);
@@ -105,11 +131,11 @@ void printBanco2(){
     for (int i = 0; i < banco.size(); i++){
         racional = dynamic_cast<Racional*>(banco[i]);
         if (racional!=NULL){
-            cout<<i++<<racional->toString()<<endl;
+            cout<<i+1<<") "<<racional->toString()<<endl;
         }else {
             radical = dynamic_cast<Radical*>(banco[i]);
             if (radical!=NULL){
-                cout<<i++<<radical->toString()<<endl;
+                cout<<i+1<<") "<<radical->toString()<<endl;
             }
         }
     }
@@ -205,6 +231,8 @@ void RealizarOperacion(){
 void toString(Real* num1){
     Radical* radical = dynamic_cast<Radical*>(num1);
     Racional* racional = dynamic_cast<Racional*>(num1);
+    Radical radical2 = *radical;
+    Racional racional2 = *racional;
     if(radical!=NULL){
         cout<<radical->toString();
     }

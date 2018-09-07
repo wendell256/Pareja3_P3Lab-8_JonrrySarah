@@ -14,6 +14,7 @@ class Radical:public Real{
         double getIndice();
         double getRadicando();
         string toString();
+        
 };
 
 #endif

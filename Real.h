@@ -6,7 +6,6 @@ using namespace std;
 
 class Real{
     protected:
-        virtual string toString();
         double num;
 
     public: 
@@ -18,6 +17,7 @@ class Real{
         double operator*(Real&);
         double operator/(Real&);
         void setNum(double);
+        virtual string toString(){}
         
 };
 

@@ -8,19 +8,15 @@ class Racional : public Real{
         double denominador;
     
     public:
-        double operator+(Real&);
-        double operator-(Real&);
-        double operator*(Real&);
-        double operator/(Real&);
 
         Racional(double,double);
 
         double getNumerador();
         double getDenominador();
 
-        virtual string toString();
+        string toString();
 
-        ~Racional();
+      
 
 };
 

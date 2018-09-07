@@ -18,10 +18,12 @@ double Racional::getDenominador(){
 }
 
 string Racional::toString(){
-    string respuesta, sNum, sDen;
-    sNum = to_string(numerador);
-    sDen = to_string(denominador);
-    respuesta = sNum + "/" + sDen;
+    string respuesta, ssNum, ssDen;
+    ssNum = to_string(numerador);
+    ssDen = to_string(denominador);
+    respuesta = ssNum + "/" + ssDen;
     return respuesta;
 }
+
+
 

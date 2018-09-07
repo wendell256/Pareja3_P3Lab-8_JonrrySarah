@@ -31,3 +31,4 @@ double Real::operator/(Real& rValue){
 void Real::setNum(double Nnum){
     num=Nnum;
 }
+
